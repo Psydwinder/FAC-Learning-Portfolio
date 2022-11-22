@@ -50,6 +50,19 @@
 
 ## 3. Design a UI without relying solely on colour, so that we don’t exclude colour-blind users
 
+<details>
+  <summary>Evidence</summary>
+  <br>
+  
+
+  |![image](https://user-images.githubusercontent.com/101563800/203403742-7c70ef1d-0de8-4aa0-bcd4-dc92a02dafd4.png)|
+  |:--:| 
+  | *Above: The meet the team section of our agency website* |
+  
+  We approached this project with the intention of starting with as little colour as possible to cater towards colour blind users. However, as time went on we decided to also add in colours that could be easily read by individuals with conditions like dyslexia.
+  
+</details>
+
 ## 4. Ensure our UI has sufficient colour contrast so that everyone can perceive it comfortably
 
 ## 5. Use various tools to check that a website meets accessibility criteria
