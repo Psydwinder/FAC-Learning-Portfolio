@@ -5,6 +5,41 @@
 <details>
   <summary>Evidence</summary>
    
+  One of the first tests I wrote was to test whether any text that is added into an input box can be added to the to do list. 
+  
+  Below is the code snippet that demonstrates this:
+  
+  ```JS
+  
+  const testInput = document.getElementById("task-input");
+  const testBtn = document.getElementById("addtaskbtn");
+  const testList = document.getElementById("tasklist");
+  const testItem = document.querySelectorAll(".task-item");
+
+  function createTestTask(task) {
+    testInput.value = task;
+    testBtn.click();
+    testInput.value = "";
+  }
+
+  function clearTest() {
+    testList.innerHTML = "";
+    localStorage.clear();
+  }
+
+  // ADD tests
+  test("Submitting a new task adds it to the list", () => {
+    createTestTask("Task1");
+    equal(testList.children.length, 1, "One task is added to the list");
+    clearTest();
+  });
+  
+  ```
+  
+  
+  |![image](https://user-images.githubusercontent.com/101563800/205118479-544053f9-a6da-4f93-8f63-b02610e4c904.png)|
+  |:--:|
+  |*Above: What the test looks like in the console*|
 
 </details>
 
