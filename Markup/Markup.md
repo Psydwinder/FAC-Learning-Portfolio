@@ -67,12 +67,25 @@
 
 <details>
   <summary>Evidence</summary>
+  
+  
 </details>
 
 ## 5. Use various tools to check that a website meets accessibility criteria
 
 <details>
   <summary>Evidence</summary>
+  
+  We used a mixture of Chrome's Lighthouse Extension to check for any immediate faults in our website, for example images not having alt text. In addition to this we used W3's HTML Markup Validator to check for semantic errors within our code and minimise the number of errors we were seeing.
+  
+  |![image](https://user-images.githubusercontent.com/101563800/205083937-a656c717-1173-4b25-b081-83255584591c.png)|
+  |:--:|
+  | *Above: Using Chrome's Lighthouse Extension to measure the website aginst various metrics* |
+  
+  |![image](https://user-images.githubusercontent.com/101563800/205084952-9fd6072d-0f7b-4ff9-bc80-ae44a1631ab8.png)|
+  |:--:|
+  | *Above: Using W3's HTML Markup Validator* |
+
 </details>
 
 ## 6. Ensure a website displays well on screens of different sizes
