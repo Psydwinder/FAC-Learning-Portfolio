@@ -109,6 +109,19 @@
 ## 3. Write testable, modular functions
 <details>
   <summary>Evidence</summary>
+  
+  After having written the tests, following the RED, GREEN, REFACTOR principle from Test Driven Development I was able to write functions that related to the tests and would actually perform the task.
+  
+  Below is the code snippet that demonstrates this:
+  
+  ```JS
+  function displayError() {
+  error.textContent = "Please enter a task!";
+  setTimeout(() => {
+    error.textContent = "";
+  }, 2000);
+}
+  ```
   </details>
 
 ## 4. Write functions that add, remove or modify DOM nodes
