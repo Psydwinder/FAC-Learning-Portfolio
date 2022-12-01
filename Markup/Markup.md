@@ -92,6 +92,8 @@
 
 <details>
   <summary>Evidence</summary>
+  
+  
 </details>
 
 ## 7. Use CSS media queries to ensure content is always presented effectively
