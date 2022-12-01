@@ -5,7 +5,7 @@
 <details>
   <summary>Evidence</summary>
    
-  One of the first tests I wrote was to test whether any text that is added into an input box can be added to the to do list. 
+  One of the first tests I wrote was to test whether any text that is added into an input box can be added to the to do list. However, if the user was to try and add a task without entering any text within the input field they should be presented with an error message
   
   Below is the code snippet that demonstrates this:
   
@@ -27,25 +27,83 @@
     localStorage.clear();
   }
 
-  // ADD tests
-  test("Submitting a new task adds it to the list", () => {
-    createTestTask("Task1");
-    equal(testList.children.length, 1, "One task is added to the list");
-    clearTest();
-  });
+  test("Test to see if there is an input within the input field", () => {
+  createTestTask("");
+  const error = document.querySelector("#errorMsg");
+  error.classList.add("hidden");
+  equal(
+    error.textContent,
+    "Please enter a task!",
+    "Displayed error message for empty input"
+  );
+  clearTest();
+});
   
   ```
   
-  
-  |![image](https://user-images.githubusercontent.com/101563800/205118479-544053f9-a6da-4f93-8f63-b02610e4c904.png)|
+  |![image](https://user-images.githubusercontent.com/101563800/205120928-41e99b00-c158-4514-9172-63e02252829d.png)|
   |:--:|
-  |*Above: What the test looks like in the console*|
+  |*Above: The test in action and running as intended*|
 
 </details>
 
 ## 2. Write tests to mimic the behaviour of a user performing different actions
 <details>
   <summary>Evidence</summary>
+  
+  Within our team we wrote various tests designed to mimic the behaviour of a real world user. 
+  
+  Below are some example in the console along with their code snippet counterparts:
+  
+  |![image](https://user-images.githubusercontent.com/101563800/205122126-63cd2a17-c63e-4629-b3af-ffb27f7e08b2.png)|
+  |:--:|
+  |*Above: Number error message test passed!|
+  
+  ``` JS
+  test("Test to see if input is prevented when user only enters numbers", () => {
+  createTestTask(1232131);
+  const error = document.querySelector("#errorMsg");
+  error.classList.add("hidden");
+  equal(
+    error.textContent,
+    "Tasks should have some text, not just numbers.",
+    "Displayed error message for empty input"
+  );
+  clearTest();
+});
+  ```
+  
+  |![image](https://user-images.githubusercontent.com/101563800/205122936-5e95e1af-caaf-4e23-a048-0c15bd8cbb30.png)|
+  |:--:|
+  |*Above: Error message test for an input longer than 30 characters passed!|
+  
+  ``` JS
+ test("Test to see if input is prevented when user enters more than 30 characters", () => {
+  createTestTask("abcdefghijklmnopqrstuwxyzabcedefghij");
+  const error = document.querySelector("#errorMsg");
+  error.classList.add("hidden");
+  equal(
+    error.textContent,
+    "Please keep your task name under 30 characters.",
+    "Displayed error message for empty input"
+  );
+  clearTest();
+});
+  ```
+  
+  |![image](https://user-images.githubusercontent.com/101563800/205123512-5c9190f3-7945-40ca-aa9b-b759a0716aff.png)|
+  |:--:|
+  |*Above: Deleting a task test passed!|
+  
+  ``` JS
+  test("Clicking delete will remove a task from the list", () => {
+  createTestTask("Task3");
+  const trashBtns = document.querySelectorAll(".trash-btn");
+  trashBtns[0].click();
+  equal(trashBtns[0].offsetParent, null, "Task deleted from the list");
+  });
+  ```
+  
 </details>
 
 ## 3. Write testable, modular functions
