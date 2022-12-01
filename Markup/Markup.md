@@ -65,14 +65,42 @@
 
 ## 4. Ensure our UI has sufficient colour contrast so that everyone can perceive it comfortably
 
+<details>
+  <summary>Evidence</summary>
+</details>
+
 ## 5. Use various tools to check that a website meets accessibility criteria
+
+<details>
+  <summary>Evidence</summary>
+</details>
 
 ## 6. Ensure a website displays well on screens of different sizes
 
+<details>
+  <summary>Evidence</summary>
+</details>
+
 ## 7. Use CSS media queries to ensure content is always presented effectively
+
+<details>
+  <summary>Evidence</summary>
+</details>
 
 ## 8. Demonstrate a mobile-first approach to designing a website with a great user experience
 
+<details>
+  <summary>Evidence</summary>
+</details>
+
 ## 9. Create an attractive and accessible colour palette for a project
 
+<details>
+  <summary>Evidence</summary>
+</details>
+
 ## 10. Use CSS variables to apply repeated colours to HTML elements
+
+<details>
+  <summary>Evidence</summary>
+</details>
