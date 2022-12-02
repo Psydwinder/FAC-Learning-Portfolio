@@ -199,6 +199,124 @@ function addTask() {
 ## 5. Apply event listeners to HTML form elements
 <details>
   <summary>Evidence</summary>
+  
+  I have applied to event listeners to HTML form elements.
+  
+  This is demonstrated in the code below:
+  
+  In order to see how the everything links together we need to look through it sequentially.
+  
+  1. You need to decide which HTML form element you want to add an event listener to. In order to do this you need to look at the HTML file, recognise which element you want add an event listener to and make a note of the id/class of that element. In this case we are using the **button element with the ID addtaskbtn**
+  
+  ```HTML
+  <form id="form">
+      <div class="input-div">
+        <input
+          type="text"
+          class="task-input"
+          id="task-input"
+          placeholder="Enter your task here"
+          autocomplete="off"
+        />
+        <button
+          name="add-task"
+          type="submit"
+          class="addtaskbtn"
+          id="addtaskbtn"
+        >
+          <i class="fas fa-plus-square"></i>
+        </button>
+      </div>
+      <div class="select">
+        <select name="todos" class="filter-todo" id="filter-todo">
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="incomplete">Incomplete</option>
+        </select>
+      </div>
+    </form>
+  ```
+  
+  2. Next, you need to call that element in the JavaScript file using the **getElementById method**
+  
+  ```JS 
+  const taskBtn = document.getElementById("addtaskbtn");
+   ```
+  
+  3. Next, you create a function to perform a specific task. In this case the function is supposed to add a task into the task list and local storage.
+  
+  ```JS
+  function addTask() {
+  //Dynamically creating a new div for tasks and buttons to sit inside. This is what will be displayed when the button is clicked
+  const taskDiv = document.createElement("div");
+  taskDiv.classList.add("task");
+
+  //Create list items
+  const newTask = document.createElement("li");
+  newTask.innerText = taskInput.value;
+  newTask.classList.add("task-item");
+  taskDiv.appendChild(newTask);
+
+  //Add task to Local Storage
+  saveLocalTasks(taskInput.value);
+  //Check Mark button
+  const completedButton = document.createElement("button");
+  completedButton.innerHTML = '<i class="fas fa-check"></i>';
+  completedButton.classList.add("complete-btn");
+  taskDiv.appendChild(completedButton);
+
+  //Delete button
+  const trashButton = document.createElement("button");
+  trashButton.innerHTML = '<i class="fas fa-trash"></i>';
+  trashButton.classList.add("trash-btn");
+  taskDiv.appendChild(trashButton);
+
+  //Append to UL
+  taskList.appendChild(taskDiv);
+
+  //Clear Input value
+  taskInput.value = "";
+}
+
+//Display error message
+function displayError() {
+  error.textContent = "Please enter a task!";
+  setTimeout(() => {
+    error.textContent = "";
+  }, 2000);
+}
+  ```
+  
+  4. Next, you write a function that checks the validity of what has been entered in the input box to make sure it isn't empty, longer than 30 characters or only numeric. ** We call the previous function within this function as part of the else statement** because we only want to run this function if what has been entered in the input field is valid.**
+  
+  ```JS
+  function validateTask(event) {
+  event.preventDefault(); //Prevents page from refreshing when button is clicked
+
+  if (taskInput.value.length == 0) {
+    displayError();
+    taskInput.focus();
+    error.classList.remove("hidden");
+  } else if (taskInput.value.length > 30) {
+    errMsgMaxChar();
+    taskInput.value = "";
+    taskInput.focus();
+    error.classList.remove("hidden");
+  } else if (!isNaN(taskInput.value)) {
+    errMsgNumInput();
+    taskInput.focus();
+    error.classList.remove("hidden");
+  } else {
+    return addTask();
+  }
+}
+  ```
+  
+  5. Lastly, we add an event listener to the button element.
+  
+  ```JS
+  taskBtn.addEventListener("click", validateTask);
+  ```
   </details>
   
 ## 6. Use scope to control what variables are accessible inside functions and blocks
