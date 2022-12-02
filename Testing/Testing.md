@@ -322,6 +322,29 @@ function displayError() {
 ## 6. Use scope to control what variables are accessible inside functions and blocks
 <details>
   <summary>Evidence</summary>
+  
+  I can demonstrate that I have used variables with a mixture of **global** and **local** scope.
+  
+  ```JS
+  //Selectors
+const taskInput = document.getElementById("task-input");
+const taskBtn = document.getElementById("addtaskbtn");
+const taskList = document.getElementById("tasklist");
+const filterOption = document.querySelector(".filter-todo");
+const form = document.getElementById("form");
+const error = document.getElementById("errorMsg");
+  ```
+  
+  The above code snippet are variables with global scope as they are used in multiple places throughout the code.
+  
+  ```JS
+  const completedButton = document.createElement("button");
+  completedButton.innerHTML = '<i class="fas fa-check"></i>';
+  completedButton.classList.add("complete-btn");
+  taskDiv.appendChild(completedButton);
+  ```
+  
+  The completedButton variable above has local scope as it is isolated within the add task function.
   </details>
   
 ## 7. Use CSS grid to create complex layouts
