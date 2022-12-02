@@ -335,7 +335,7 @@ const form = document.getElementById("form");
 const error = document.getElementById("errorMsg");
   ```
   
-  The above code snippet are variables with global scope as they are used in multiple places throughout the code.
+  The above code snippet are variables with **global scope** as they are used in multiple places throughout the code.
   
   ```JS
   const completedButton = document.createElement("button");
@@ -344,7 +344,7 @@ const error = document.getElementById("errorMsg");
   taskDiv.appendChild(completedButton);
   ```
   
-  The completedButton variable above has local scope as it is isolated within the add task function.
+  The completedButton variable above has **local scope** as it is isolated within the add task function.
   </details>
   
 ## 7. Use CSS grid to create complex layouts
