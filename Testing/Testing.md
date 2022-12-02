@@ -127,6 +127,73 @@
 ## 4. Write functions that add, remove or modify DOM nodes
 <details>
   <summary>Evidence</summary>
+  <br>
+  Below, are code snippets that allowed us to add, remove and modiy DOM nodes for various functions
+  
+  ```JS
+ 
+  // ADD TASK
+function addTask() {
+  //Dynamically creating a new div for tasks and buttons to sit inside. This is what will be displayed when the button is clicked
+  const taskDiv = document.createElement("div");
+  taskDiv.classList.add("task");
+
+  //Create list items
+  const newTask = document.createElement("li");
+  newTask.innerText = taskInput.value;
+  newTask.classList.add("task-item");
+  taskDiv.appendChild(newTask);
+
+  //Add task to Local Storage
+  saveLocalTasks(taskInput.value);
+  //Check Mark button
+  const completedButton = document.createElement("button");
+  completedButton.innerHTML = '<i class="fas fa-check"></i>';
+  completedButton.classList.add("complete-btn");
+  taskDiv.appendChild(completedButton);
+
+  //Delete button
+  const trashButton = document.createElement("button");
+  trashButton.innerHTML = '<i class="fas fa-trash"></i>';
+  trashButton.classList.add("trash-btn");
+  taskDiv.appendChild(trashButton);
+
+  //Append to UL
+  taskList.appendChild(taskDiv);
+
+  //Clear Input value
+  taskInput.value = "";
+}
+  ```
+  
+  The above code is the function for adding a task to the list. **It ADD's to the DOM node with the use of the appendChild() method.**
+  
+  ```JS
+  
+  function deleteCheck(e) {
+  const item = e.target;
+
+  //Delete task
+  if (item.classList[0] === "trash-btn") {
+    const todo = item.parentElement;
+    removeLocalTodos(todo);
+    todo.remove();
+  }
+
+  //Check Mark
+  if (item.classList[0] === "complete-btn") {
+    const todo = item.parentElement;
+    todo.classList.toggle("completed");
+  }
+}
+  
+ ```
+  
+  The above code is for a function that performs two tasks 
+  
+  1. To delete a task from the task list as well from the local storage. **Demonstrating that it REMOVES's an element from the DOM node with the use of the remove() method.** 
+  2. Toggling the class "completed" on element with ID todo. **Demonstrating that the DOM node is being modified with the use of the toggle() method.** 
+  
   </details>
 
 ## 5. Apply event listeners to HTML form elements
