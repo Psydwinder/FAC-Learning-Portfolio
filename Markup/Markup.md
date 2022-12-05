@@ -109,6 +109,126 @@
 
 <details>
   <summary>Evidence</summary>
+  
+  Below is an example code snippet of a media query we used to ensure content is presented effectively on a device with a screen size less than 420px
+  
+  ```CSS
+  @media (max-width: 420px) {
+  body{
+max-width: fit-content;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: var(--bg-color);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 75%;
+    right: -100%;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    width: 40%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    padding: 20px 0;
+  }
+
+  .nav-menu.active {
+    right: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .home-content {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 100px;
+    padding-top: 20px;
+    width: 100%;
+  }
+  
+  .home-img {
+    width: 1000px;
+    height: 1000px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+  }
+  
+  .home-text {
+    width: 400px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    justify-content: center;
+  }
+ 
+  .home-text h1 {
+    font-size: 2.5rem;
+  }
+  .home-text p {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section-heading {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--heading-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 100;
+  }
+  
+  .project-container {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    align-items: center;
+    margin-left:30px;
+  }
+
+  .project-card .card-banner img {
+    border-radius: 25px;
+    transition: var(--transition-2);
+    width: 300px;
+    height: 429px;
+    object-fit: cover; 
+  }
+
+  .description {
+    max-width: 200px;
+    width: 200px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+    position: absolute;
+    margin: auto;
+    margin-top: -225px;
+    background-color: hsl(47, 100%, 69%);
+    border-radius: 10px;
+    padding: 50px;
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s ease;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+  ```
 </details>
 
 ## 8. Demonstrate a mobile-first approach to designing a website with a great user experience
