@@ -93,10 +93,15 @@
 <details>
   <summary>Evidence</summary>
   
+  Below are a few examples of what the site looks like on two devices of varying sizes. 
+  
   |![image](https://user-images.githubusercontent.com/101563800/205667761-dde0f43a-6aba-4685-99bc-a84e208a4723.png)|
   |:--:|
   |*Above: What the app looks like on a Samsung S8+*|
 
+  |![image](https://user-images.githubusercontent.com/101563800/205668356-1ad9c967-a848-4fb2-958d-3279750755d4.png)|
+  |:--:|
+  |*Above: What the app looks like on an iPad Mini*|
   
 </details>
 
