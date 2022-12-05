@@ -235,6 +235,13 @@ max-width: fit-content;
 
 <details>
   <summary>Evidence</summary>
+  
+  Although we didn't design the website using a mobile-first approach, we did use media queries to allow the website to be read easily using a mobile.
+  
+  |![image](https://user-images.githubusercontent.com/101563800/205667761-dde0f43a-6aba-4685-99bc-a84e208a4723.png)|
+  |:--:|
+  |*Above: What the app looks like on a Samsung S8+*|
+  
 </details>
 
 ## 9. Create an attractive and accessible colour palette for a project
