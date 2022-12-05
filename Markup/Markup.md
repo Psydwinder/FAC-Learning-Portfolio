@@ -248,10 +248,43 @@ max-width: fit-content;
 
 <details>
   <summary>Evidence</summary>
+  
+  For this project we decided to use a minimal colour palette so that there is a contrast between the text and the styling. 
+  
+  This is also the reason why we have intentionally spaced information out over the page. We utilised the white space so that the the user is not overloaded with information and is lead through the website absorbing as much information as possible.
+  
+  Keeping that in mind, we have sprinkled dashes of colour sporadically through the site, especially on the landing page as this is the first thing the user will see.
+  
+  |![image](https://user-images.githubusercontent.com/101563800/205671034-1baf17bc-31ff-4bc0-b053-aa3cfd3e5a36.png)|
+  |:--:|
+  |*Above: Colour that has been utilised on the landing page*| 
+
 </details>
 
 ## 10. Use CSS variables to apply repeated colours to HTML elements
 
 <details>
   <summary>Evidence</summary>
+  
+  Where possible we have defined root colours that could be utilised throughtout the stylesheet without having to enter the exact hexcode for that colour multiple times.
+  
+  ```CSS
+  :root {
+  --main-color: #647bff;
+  --body-color: #090a1a;
+  --container-color: #171b3c;
+  --heading-color: #222231;
+  --box-color: #0d0f26;
+  --bg-color: #fff;
+}
+  ```
+  ```CSS
+  .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--bg-color);
+  ```
+  *Above: The code snippet shows that I have use var(--bg-color) for the nav bar*
 </details>
