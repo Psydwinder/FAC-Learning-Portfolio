@@ -350,10 +350,43 @@ const error = document.getElementById("errorMsg");
 ## 7. Use CSS grid to create complex layouts
 <details>
   <summary>Evidence</summary>
+  <br>
+  
+  Although we haven't used CSS Grids in this project. I have utilised it in other projects.
+  
+  Below is an example code snippet used within the HTTP Project
+  
+  ```CSS
+  main {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+}
+  ```
+  |![image](https://user-images.githubusercontent.com/101563800/205526727-cd47adfb-6b64-4fa8-9ac2-533eaee6272d.png)|
+  |:--:|
+  |*Above: What the code looks like visually*|
+
   </details>
 
 ## 8. Use CSS grid to make layouts that adapt to the viewport size
 <details>
   <summary>Evidence</summary>
+  <br>
+  
+  Below is an example code snippet of how I modified the display grid styling adapt itself to different devices.
+  
+  ```CSS
+  @media screen and (max-width: 960px) {
+  main {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+  }
+  ```
+  
+  |![image](https://user-images.githubusercontent.com/101563800/205528504-5635596f-c4bd-42e4-9f00-6b6456ef5689.png)|
+  |:--:|
+  |*Above: What the app looks like on a Samsung Galaxy S20 Ultra based on the media query*|
   </details>
   
