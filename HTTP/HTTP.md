@@ -9,6 +9,19 @@
 ## 2. Use callbacks to access values that aren't available asynchronously 
 <details>
   <summary>Evidence</summary>
+  
+  I used the showMovies() callback function using the data gathered from the async function getMovies() in order to get values such as the title, poster image (poster_path), film's average score (vote_average), film description (overview) and the film id. The values would then be rendered on the page inside an individual movie card.
+  
+  You can seen an example of this below:
+  
+  ```JS
+  function showMovies(data) {
+  main.innerHTML = "";
+  data.forEach((movie) => {
+    const { title, poster_path, vote_average, overview, id } = movie;
+    const movieEl = document.createElement("div");
+    movieEl.classList.add("movie");
+  ```
 </details>
 
 ## 3. Use promises to access values that aren't available asynchronously
