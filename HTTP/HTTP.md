@@ -12,6 +12,7 @@
   <br>
   I used the showMovies() callback function within the async function getMovies(). With the purpose of this function being that it accesses the title, poster_path(the poster image), vote_average (The user score for that movie based on people rating it between 0 and 10), overview (the movie description) and the ID.
   
+  
   You can seen an example of this below:
   
   ```JS
@@ -27,6 +28,21 @@
 ## 3. Use promises to access values that aren't available asynchronously
 <details>
   <summary>Evidence</summary>
+  
+  From the below code snippet you can see that we must first fetch some data from a server. It takes two arguments: the URL you want to send the request to and an options object.  From this we will receive a promise that will eventually represent the server’s response (when the network request completes).
+ 
+  We must then access the promises value. Since the API returns JSON-formatted data we can use the response.json() method, shortened to res.json() here, to access it. The .json() method also returns a promise, so we need to use another .then() to access the value.
+  
+  In the end we can log the values we get from the response in the form of data with the line console.log(data.results)
+  
+  ```JS
+  function getMovies(url) {
+  lastUrl = url;
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data.results);
+  ```
   </details>
 
 ## 4. Use the fetch method to make the HTTP requests and receive responses
