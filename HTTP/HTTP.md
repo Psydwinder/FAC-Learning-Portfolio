@@ -10,7 +10,7 @@
 <details>
   <summary>Evidence</summary>
   <br>
-  I used the showMovies() callback function using the data gathered from the async function getMovies() in order to get values such as the title, poster image (poster_path), film's average score (vote_average), film description (overview) and the film id. The values would then be rendered on the page inside an individual movie card.
+  I used the showMovies() callback function within the async function getMovies(). With the purpose of this function being that it accesses the title, poster_path(the poster image), vote_average (The user score for that movie based on people rating it between 0 and 10), overview (the movie description) and the ID.
   
   You can seen an example of this below:
   
