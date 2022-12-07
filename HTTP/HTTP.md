@@ -54,6 +54,12 @@
 ## 11. Use consistent layout and spacing
 <details>
   <summary>Evidence</summary>
+  
+  With this project I tried to have a consistent look to the app, utilising CSS grids to space out the movie cards regardless of the device it was being dsiplayed on.
+  
+  |![image](https://user-images.githubusercontent.com/101563800/206185802-52e52a94-e8b7-482e-b32b-e59a75a6193c.png)|
+  |:--:|
+  |*Above: Consistent layout and spacing for the movie cards*|
   </details>
 
 ## 12. Follow a spacing guideline to give our app a consistent feel
@@ -66,7 +72,7 @@
   <summary>Evidence</summary>
   </details>
   
-## 14. Usr console.log() to help us debug our code
+## 14. Use console.log() to help us debug our code
 <details>
   <summary>Evidence</summary>
   </details>
