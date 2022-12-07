@@ -9,7 +9,7 @@
 ## 2. Use callbacks to access values that aren't available asynchronously 
 <details>
   <summary>Evidence</summary>
-  
+  <br>
   I used the showMovies() callback function using the data gathered from the async function getMovies() in order to get values such as the title, poster image (poster_path), film's average score (vote_average), film description (overview) and the film id. The values would then be rendered on the page inside an individual movie card.
   
   You can seen an example of this below:
@@ -67,7 +67,7 @@
 ## 11. Use consistent layout and spacing
 <details>
   <summary>Evidence</summary>
-  
+  <br>
   With this project I tried to have a consistent look to the app, utilising CSS grids to space out the movie cards regardless of the device it was being dsiplayed on.
   
   |![image](https://user-images.githubusercontent.com/101563800/206185802-52e52a94-e8b7-482e-b32b-e59a75a6193c.png)|
