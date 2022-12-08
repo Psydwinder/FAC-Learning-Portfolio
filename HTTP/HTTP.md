@@ -4,6 +4,8 @@
 ## 1. Write code that executes asynchronously
 <details>
   <summary>Evidence</summary>
+  <br>
+  JavaScript is a single-threaded language. This means things generally happen one at a time, in the order you wrote the code. When something needs to happen out of this order, it is known as asynchronous. Using API's using a fetch method is
 </details>
 
 ## 2. Use callbacks to access values that aren't available asynchronously 
@@ -48,6 +50,23 @@
 ## 4. Use the fetch method to make the HTTP requests and receive responses
 <details>
   <summary>Evidence</summary>
+  <br>
+  Similar to evidence #3
+  
+   From the below code snippet you can see that we must first fetch some data from a server. It takes two arguments: the URL you want to send the request to and an options object.  From this we will receive a promise that will eventually represent the server’s response (when the network request completes).
+ 
+  We must then access the promises value. Since the API returns JSON-formatted data we can use the response.json() method, shortened to res.json() here, to access it. The .json() method also returns a promise, so we need to use another .then() to access the value.
+  
+  In the end we can log the values we get from the response in the form of data with the line console.log(data.results)
+  
+  ```JS
+  function getMovies(url) {
+  lastUrl = url;
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data.results);
+  ```
   </details>
 
 ## 5. Configure the options argument of the fetch method to make GET and POST requests
