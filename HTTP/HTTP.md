@@ -5,7 +5,17 @@
 <details>
   <summary>Evidence</summary>
   <br>
-  JavaScript is a single-threaded language. This means things generally happen one at a time, in the order you wrote the code. When something needs to happen out of this order, it is known as asynchronous.
+  JavaScript is a “single-threaded” language. This means things generally happen one at a time, in the order you wrote the code. When something needs to happen out of this order, we call it “asynchronous” (“async” for short). JavaScript handles this using a “queue”. Anything async gets pushed out of the main running order and into the queue. Once JS finishes what it was doing it moves on to the first thing in the queue.
+  
+  
+  |![Async explanation](http://mariechatfield.com/tutorials/assets/async/diagram_async_02.png)|
+  |:--:|
+  |*Above: Async Function diagram explanation*|
+  
+  <br>
+  By using the fetch API method I was able to write code that executes asynchronously. You can view the entire project and code 
+  
+  
 </details>
 
 ## 2. Use callbacks to access values that aren't available asynchronously 
