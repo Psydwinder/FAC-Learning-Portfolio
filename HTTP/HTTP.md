@@ -5,7 +5,7 @@
 <details>
   <summary>Evidence</summary>
   <br>
-  JavaScript is a single-threaded language. This means things generally happen one at a time, in the order you wrote the code. When something needs to happen out of this order, it is known as asynchronous. Using API's using a fetch method is
+  JavaScript is a single-threaded language. This means things generally happen one at a time, in the order you wrote the code. When something needs to happen out of this order, it is known as asynchronous.
 </details>
 
 ## 2. Use callbacks to access values that aren't available asynchronously 
