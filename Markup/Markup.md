@@ -11,7 +11,7 @@
   
   In addition to this we have also add in a class to each element, so that a developer working on the code knows what each element pertains to.
   
-  ```html
+  ```HTML
     <header>
       <nav class="navbar">
         <a href="#" class="nav-branding">NerdWhale</a>
@@ -41,7 +41,7 @@
   <br>
   We have included alternative text on images to help screen readers understand and feed back to visually impaired users what the element pertains to.
   
-  ```html
+  ```HTML
   <div class="home-img">
   <img src="img/Nerdwhale2-01.png" alt="company image" class="company-pic" />
   </div>
