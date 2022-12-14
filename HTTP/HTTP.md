@@ -102,6 +102,21 @@
 ## 8. Access DOM nodes using a variety of selectors
 <details>
   <summary>Evidence</summary>
+  <br>
+  I have used various selectors throughout this project. You can see an example of this in the code snippet below.
+  
+  ```JS
+  const main = document.getElementById("main");
+const form = document.getElementById("form");
+const search = document.getElementById("search");
+const tagsEl = document.getElementById("tags");
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+const prev = document.getElementById("previous");
+const next = document.getElementById("next");
+const current = document.getElementById("current");
+  ```
+  
   </details>
   
 ## 9. Add and remove DOM nodes to change the content on the page
