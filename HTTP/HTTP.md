@@ -203,7 +203,6 @@ const current = document.getElementById("current");
   |![image](https://user-images.githubusercontent.com/101563800/206185802-52e52a94-e8b7-482e-b32b-e59a75a6193c.png)|
   |:--:|
   |*Above: Consistent layout and spacing for the movie cards*|
-  </details>
   
   Below is the code that allows me to achieve this look
   
@@ -239,4 +238,16 @@ const current = document.getElementById("current");
 ## 14. Use console.log() to help us debug our code
 <details>
   <summary>Evidence</summary>
+  <br>
+  
+  ```JS
+  function getMovies(url) {
+  lastUrl = url;
+  fetch(url)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data.results);
+  ```
+  I have used the console.log() method here to check that the data is being fetched and loaded from the TMDB API. This would be useful when creating a function that could check to see if the TMDB server is available and throw out an error if it isn't.
+  
   </details>
