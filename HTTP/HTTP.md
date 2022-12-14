@@ -204,7 +204,28 @@ const current = document.getElementById("current");
   |:--:|
   |*Above: Consistent layout and spacing for the movie cards*|
   </details>
+  
+  Below is the code that allows me to achieve this look
+  
+  ```CS
+  main {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-content: center;
+}
 
+.movie {
+  width: 425px;
+  margin: 1rem;
+  background-color: var(--secondary-color);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+}
+  ```
+  </details>
+  
 ## 12. Follow a spacing guideline to give our app a consistent feel
 <details>
   <summary>Evidence</summary>
