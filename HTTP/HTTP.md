@@ -13,7 +13,7 @@
   |*Above: Async Function diagram explanation*|
   
   <br>
-  By using the fetch API method I was able to write code that executes asynchronously. You can view the entire project and code 
+  By using the fetch API method I was able to write code that executes asynchronously. You can view the entire project and code [Hello](url)
   
   
 </details>
@@ -26,6 +26,7 @@
   
   
   You can seen an example of this below:
+  
   
   ```JS
   function showMovies(data) {
@@ -116,7 +117,7 @@
 <details>
   <summary>Evidence</summary>
   <br>
-  With this project I tried to have a consistent look to the app, utilising CSS grids to space out the movie cards regardless of the device it was being dsiplayed on.
+  With this project I tried to have a consistent look to the app, utilising CSS grids to space out the movie cards regardless of the device it was being displayed on.
   
   |![image](https://user-images.githubusercontent.com/101563800/206185802-52e52a94-e8b7-482e-b32b-e59a75a6193c.png)|
   |:--:|
