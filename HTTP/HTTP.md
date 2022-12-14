@@ -122,6 +122,45 @@ const current = document.getElementById("current");
 ## 9. Add and remove DOM nodes to change the content on the page
 <details>
   <summary>Evidence</summary>
+  <br>
+  
+  For this project I wanted to be able to create "movie cards" dynamically, so that as the TMDB API was updated so to would the displayed movies on the app. Below is code snippet for the showMovies() function that creates a div element with the class movie. Within this element the title, the film description, the film poster and average user score can be filled in from the data that is fetched from the TMDB API. 
+  
+  ```JS
+  function showMovies(data) {
+  main.innerHTML = "";
+  data.forEach((movie) => {
+    const { title, poster_path, vote_average, overview, id } = movie;
+    const movieEl = document.createElement("div");
+    movieEl.classList.add("movie");
+    movieEl.innerHTML = `
+    <img src="${
+      movie.poster_path
+        ? IMAGE_URL + movie.poster_path
+        : "https://www.cinemahalls.com/wp-content/uploads/2019/10/Picture-Not-Available-1.jpg"
+    }"
+    alt="${title} image"
+  />
+  <div class="movie-info">
+    <h3>${title}</h3>
+    <span class="${getColor(vote_average)}">${vote_average}</span>
+  </div>
+  <div class="overview">
+    <h3>${title}</h3>
+    ${overview}
+    <br />
+    <button class="watch-trailer" id="${id}">Watch trailer</button>
+  </div>`;
+
+    main.appendChild(movieEl);
+
+    document.getElementById(id).addEventListener("click", () => {
+      console.log(id);
+      openNav(movie);
+    });
+  });
+}
+  ```
   </details>
 
 ## 10. Toggle the classes applied to DOM nodes to change their CSS properties
