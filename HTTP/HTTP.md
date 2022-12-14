@@ -166,6 +166,32 @@ const current = document.getElementById("current");
 ## 10. Toggle the classes applied to DOM nodes to change their CSS properties
 <details>
   <summary>Evidence</summary>
+  <br> 
+  Similar to some of my other projects, I have used the classList.add or classList.remove methods to change the css properties of various elements throughout this project. 
+  
+  An example of this can be seen below:
+  
+  ```JS
+  current.innerText = currentPage;
+        if (currentPage <= 1) {
+          prev.classList.add("disabled");
+          next.classList.remove("disabled");
+        } else if (currentPage >= totalPages) {
+          prev.classList.remove("disabled");
+          next.classList.add("disabled");
+        } else {
+          prev.classList.remove("disabled");
+          next.classList.remove("disabled");
+        }
+  ```
+  
+  Here the if else statement checks to see what page the user is currently on before doing one of three things: 
+  
+  
+  1. If the user is on the first page **the previous button will be disabled** and **have settings applied to it** to show the user they cant click it.
+  2. If the user is on the last page **the next button will be disabled** and **have settings applied to it** to show the user they cant click it.
+  3. If the user isn't on the first page or last page **both the previous and next button will have the class "disabled" removed** and the test of the button will appear white indicating the user can go to the next or previous page.
+  
   </details>
   
 ## 11. Use consistent layout and spacing
