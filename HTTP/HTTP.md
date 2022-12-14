@@ -203,8 +203,13 @@ const current = document.getElementById("current");
   |![image](https://user-images.githubusercontent.com/101563800/206185802-52e52a94-e8b7-482e-b32b-e59a75a6193c.png)|
   |:--:|
   |*Above: Consistent layout and spacing for the movie cards*|
+  </details>
   
-  Below is the code that allows me to achieve this look
+## 12. Follow a spacing guideline to give our app a consistent feel
+<details>
+  <summary>Evidence</summary>
+  <br>
+   The styling for the app seen in Evidence #11 was achieved with the code below:
   
   ```CS
   main {
@@ -223,11 +228,6 @@ const current = document.getElementById("current");
   border-radius: 3px;
 }
   ```
-  </details>
-  
-## 12. Follow a spacing guideline to give our app a consistent feel
-<details>
-  <summary>Evidence</summary>
   </details>
   
 ## 13. Debug client side JS in our web browser
